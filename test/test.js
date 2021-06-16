@@ -44,7 +44,7 @@ tape( 'if an environment supports `Uint32Array`, the export is an alias for `Uin
 	var Foo;
 
 	Foo = proxyquire( './../lib', {
-		'@stdlib/assert/has-uint32array-support': isTrue,
+		'@stdlib/assert-has-uint32array-support': isTrue,
 		'./uint32array.js': Mock
 	});
 	t.strictEqual( Foo, Mock, 'returns builtin' );
@@ -68,7 +68,7 @@ tape( 'if an environment does not support `Uint32Array`, the export is a polyfil
 	var Foo;
 
 	Foo = proxyquire( './../lib', {
-		'@stdlib/assert/has-uint32array-support': isFalse
+		'@stdlib/assert-has-uint32array-support': isFalse
 	});
 
 	t.strictEqual( Foo, polyfill, 'returns polyfill' );

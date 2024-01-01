@@ -20,7 +20,7 @@
 
 // MODULES //
 
-var bench = require( '@stdlib/bench' );
+var bench = require( '@stdlib/bench-harness' );
 var isUint32Array = require( '@stdlib/assert-is-uint32array' );
 var pkg = require( './../package.json' ).name;
 var Uint32Array = require( './../lib' );
